@@ -82,6 +82,7 @@ a {
 }
 
 .button {
+  font-family: 'Raleway', sans-serif;
 	outline: none;
 	background: transparent;
 	border: 1px solid #d6dce0;
@@ -200,6 +201,7 @@ a {
 				}
 				.button {
 					float: right;
+          text-decoration: none;
 				}
 			}
 			input[type="text"], textarea {
@@ -251,6 +253,7 @@ a {
 		min-height: 180px;
 	}
 	input[type="submit"] {
+    font-family: 'Raleway', sans-serif;
 		outline: none;
 		background: transparent;
 		border: 1px solid #d6dce0;
