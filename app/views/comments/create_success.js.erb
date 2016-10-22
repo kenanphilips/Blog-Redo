@@ -1,0 +1,5 @@
+// alert("Inside create success partial");
+$('#comment_number').html("<%= j render 'comment_number' %>");
+$('#comments').prepend("<%= j(render('/comments/comment', {comment: @comment})) %>");
+<% @comment = Comment.new %>
+$('#comments_form').html("<%= j render 'form' %>");

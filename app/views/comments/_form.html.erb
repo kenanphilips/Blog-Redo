@@ -1,4 +1,5 @@
-<%= form_for([@post, @post.comments.build]) do |f| %>
+<h3>Add a comment:</h3>
+<%= form_for([@post, @post.comments.build], remote: true) do |f| %>
   <p>
     <%= f.label :name %><br>
     <%= f.text_field :name %>

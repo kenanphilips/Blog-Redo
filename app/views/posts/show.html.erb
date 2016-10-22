@@ -12,14 +12,20 @@
   </p>
 
   <p class="body">
-    <%= @post.body %>
-  </p>
+    <%= simple_format(@post.body, class: "body") %>
+  </p><br>
+  <!-- <hr> -->
+
+  <div id="comments_form">
+    <%= render "comments/form" %>
+  </div><br>
+
+  <div id="comment_number">
+    <%= render "comments/comment_number" %>
+  </div>
 
   <div id="comments">
-    <h2><%= @post.comments.count %> Comments</h2>
-    <%= render @post.comments %>
-
-    <h3>Add a comment:</h3>
-    <%= render "comments/form" %>
+    <%= render @post.comments.order('created_at DESC') %>
   </div>
+
 </div>
