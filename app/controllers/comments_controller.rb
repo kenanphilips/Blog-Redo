@@ -3,9 +3,10 @@ class CommentsController < ApplicationController
   def create
     # @post = Post.find(params[:post_id])
     # @comment = @post.comments.create(params[:comment].permit(:name, :body))
-    @comment = Comment.new(params.require(:comment).permit(:name, :body))
+    @comment = Comment.new(params.require(:comment).permit(:body, :user_id))
     @post = Post.find params[:post_id]
     @comment.post = @post
+    @comment.user = current_user
 
     respond_to do |format|
 
