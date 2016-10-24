@@ -54,7 +54,8 @@
 
         <div class="buttons">
           <% if current_user %>
-            <% if user_signed_in? && current_user.admin == true %>
+            <%# if user_signed_in? && current_user.admin == true %>
+            <% if user_signed_in? %>
               <button class="button"><%= link_to "New Post", new_post_path %></button>
             <% end %>
             <button class="button"><%= link_to "Edit Account", edit_user_registration_path %></button>

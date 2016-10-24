@@ -7,10 +7,10 @@ class ApplicationController < ActionController::Base
     "#{first_name} #{last_name}"
   end
 
-  def authorize_admin
-    redirect_to root_path unless current_user.admin
-    #redirects to previous page
-  end
+  # def authorize_admin
+  #   redirect_to root_path unless current_user.admin
+  #   #redirects to previous page
+  # end
 
   protected
 
