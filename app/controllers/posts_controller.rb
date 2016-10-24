@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_filter :authorize_admin, only: [:new, :edit]
 
   def index
-    @posts = Post.paginate(page: params[:page],:per_page => 5).search(params[:search]).order('created_at DESC')
+    @posts = Post.paginate(page: params[:page],:per_page => 10).search(params[:search]).order('created_at DESC')
 
   end
 
