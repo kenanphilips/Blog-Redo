@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  # before_filter :authorize_admin, only: [:new, :edit]
+  before_filter :authorize_admin, only: [:new, :edit]
 
   def index
     @posts = Post.paginate(page: params[:page],:per_page => 10).search(params[:search]).order('created_at DESC')
